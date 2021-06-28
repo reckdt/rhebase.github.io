@@ -7,7 +7,7 @@ categories: jekyll update
 
 Here is an example how to create and use custom exceptions in PowerShell. Custom exceptions provide great flexibility by being able to seperate different types for your catch statements.
 
-#### Create & Override Constructor:
+#### Create, Inherit, & Override The Constructor:
 {% highlight powershell %}
 class CustomException: System.Exception {
     CustomException([string] $x) :
@@ -15,14 +15,16 @@ class CustomException: System.Exception {
 }
 {% endhighlight %}
 
-#### Use:
+#### Throwing:
 {% highlight powershell %}
 throw [CustomException] $x
 
 # need to use 'new' static method if 2 parameters
 throw [CustomException2]::New($x, $y)
+{% endhighlight %}
 
-# catching errors
+#### Catching:
+{% highlight powershell %}
 try {
     Invoke-Func 
 } catch [CustomException1] {
@@ -31,4 +33,3 @@ try {
    # handle errors
 }
 {% endhighlight %}
-
