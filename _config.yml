@@ -21,7 +21,7 @@
 title: make it simple 
 email: re@rhe.sh 
 description: >- # this means to ignore newlines until "baseurl:"
-  home for my ideas and tech
+  Ryan Eckhardt
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://rhe.sh" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: rhebase
